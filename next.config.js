@@ -1,4 +1,19 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const path = require('path');
+// const { PHASE_DEVELOPMENT_SERVER } = require('next/constants');
+const { PHASE_PRODUCTION_BUILD } = require('next/constants');
 
-module.exports = nextConfig
+const nextConfig = {
+	output: 'export',
+	// styledComponents: true,
+	sassOptions: {
+		includePaths: [path.join(__dirname, 'styles')],
+	},
+};
+
+module.exports = (phase, { defaultConfig }) => {
+	if (phase === PHASE_PRODUCTION_BUILD) {
+		return { ...nextConfig, basePath: '/wp-content/linkinbio' };
+	}
+	return nextConfig;
+};
