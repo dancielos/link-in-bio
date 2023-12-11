@@ -7,10 +7,14 @@ export const metadata = {
 	description: 'Social Links for Champagne Pages',
 };
 
+import styles from './globals.module.scss';
+
 export default function RootLayout({ children }) {
 	return (
 		<html lang='en'>
-			<body className={montserrat.className}>{children}</body>
+			<body className={`${montserrat.className} ${styles.body}`}>
+				{children}
+			</body>
 		</html>
 	);
 }

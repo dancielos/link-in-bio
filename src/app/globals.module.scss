@@ -1,0 +1,33 @@
+.body {
+	background-color: #ffdfea;
+}
+
+.ul {
+	list-style-type: none;
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+	margin-top: 24px;
+}
+
+.main {
+	max-width: 560px;
+	margin: 48px auto;
+	text-align: center;
+}
+
+.logo-container {
+	// background-color: #e6e5f8;
+	border-radius: 50%;
+	width: fit-content;
+	// margin: 24px;
+	// background-color: blue;
+	display: flex;
+	border: solid 1px #ea1100;
+	margin: 0 auto;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.brand-logo {
+	padding: 24px;
+}

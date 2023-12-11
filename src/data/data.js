@@ -5,13 +5,13 @@ import instagramSVG from '../../public/icons/instagram.svg';
 import pinterestSVG from '../../public/icons/pinterest.svg';
 
 export const links = [
-	{
-		href: 'https://champagnepages.com/',
-		target: '_self',
-		label: 'Website',
-		rel: '',
-		icon: internetSVG,
-	},
+	// {
+	// 	href: 'https://champagnepages.com/',
+	// 	target: '_self',
+	// 	label: 'Website',
+	// 	rel: '',
+	// 	icon: internetSVG,
+	// },
 	{
 		href: 'https://www.etsy.com/ca/shop/ChampagnePages',
 		target: '_blank',
