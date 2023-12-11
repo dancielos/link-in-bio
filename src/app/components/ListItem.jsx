@@ -41,8 +41,8 @@ export default function ListItem({
 			<a className={styles.link} href={href} target={target} rel={rel}>
 				<motion.div
 					className={styles['link-div']}
-					initial={{ transform: `translateY(4px)` }}
-					animate={{ transform: `translateY(-${randomNumber()}px)` }}
+					initial={{ transform: `translateY(3px)` }}
+					animate={{ transform: `translateY(-${randomNumber(8, 5)}px)` }}
 					transition={{
 						repeat: Infinity,
 						repeatType: 'mirror',
