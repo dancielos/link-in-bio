@@ -4,6 +4,7 @@ import styles from './listItem.module.scss';
 import { motion } from 'framer-motion';
 
 export default function ListItem({
+	i,
 	href,
 	target = '_blank',
 	label,
@@ -13,20 +14,7 @@ export default function ListItem({
 	const item = {
 		visible: { opacity: 1, y: 0 },
 		hidden: { opacity: 0, y: 300 },
-		// initial: { transform: 'translateY(20px)' },
-		// animate: { transform: 'translateY(-20px)' },
-		// transition: {
-		// 	repeat: Infinity,
-		// 	repeatType: 'mirror',
-		// 	duration: 2,
-		// 	ease: 'easeInOut',
-		// },
 	};
-
-	function randomNumber(max = 5, min = 2) {
-		//prettier-ignore
-		return Math.trunc((Math.random(1) * max) + min);
-	}
 
 	return (
 		<motion.li
@@ -42,11 +30,12 @@ export default function ListItem({
 				<motion.div
 					className={styles['link-div']}
 					initial={{ transform: `translateY(3px)` }}
-					animate={{ transform: `translateY(-${randomNumber(8, 5)}px)` }}
+					animate={{ transform: `translateY(-3px)` }}
 					transition={{
+						delay: i + 0.5,
 						repeat: Infinity,
 						repeatType: 'mirror',
-						duration: randomNumber(3, 0.1),
+						duration: 2,
 						ease: 'easeInOut',
 					}}
 				>
