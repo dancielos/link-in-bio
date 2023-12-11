@@ -2,10 +2,8 @@ import { Fraunces } from 'next/font/google';
 
 const fraunces = Fraunces({ subsets: ['latin'] });
 
+import styles from '../../app/globals.module.scss';
+
 export default function Heading({ title }) {
-	return (
-		<h1 style={{ color: '#ea1100' }} className={fraunces.className}>
-			{title}
-		</h1>
-	);
+	return <h1 className={`${fraunces.className} ${styles.h1}`}>{title}</h1>;
 }

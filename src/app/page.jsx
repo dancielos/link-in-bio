@@ -32,8 +32,8 @@ export default function Home() {
 				<div className={styles['logo-container']}>
 					<Image
 						className={styles['brand-logo']}
-						width='96'
-						height='96'
+						width='64'
+						height='64'
 						src={champagnePagesSVG}
 						alt='Champagne Pages Logo'
 					/>
